@@ -1,5 +1,7 @@
 # LYKNCTF 2026 Source Code
 
+Change to https://github.com/Loi-Yeu-Kho-Noi/LYKNCTF-2026-Challenge
+
 # Welcome
 |                        Challenge                         |  Author  | Category | Solves |
 | :------------------------------------------------------: | :------: | :------: | -----: |

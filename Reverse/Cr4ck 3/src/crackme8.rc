@@ -1,0 +1,7 @@
+#include <windows.h>
+
+/* Banner bitmap (LYKNCTF 2026) shown at the top of the window */
+2001 BITMAP "banner.bmp"
+
+/* Enable Common Controls v6 visual styles */
+1 24 "crackme.manifest"

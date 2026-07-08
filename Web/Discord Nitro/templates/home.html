@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Members Area — Home</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="card">
+    <h1>👋 Hello, {{ user.user }}!</h1>
+    <p>You are logged in with role: <span class="badge">{{ user.role }}</span></p>
+    <p class="muted">Your session is stored in the <code>token</code> cookie (a JWT).</p>
+    <div class="actions">
+      <a class="btn" href="{{ url_for('admin') }}">Go to Admin →</a>
+      <a class="btn ghost" href="{{ url_for('logout') }}">Log out</a>
+    </div>
+  </div>
+</body>
+</html>

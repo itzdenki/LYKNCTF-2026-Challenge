@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="card">
+    <h1>🛡️ Admin Panel</h1>
+    {% if flag %}
+      <p class="ok">Welcome, administrator! Here is your reward:</p>
+      <pre class="flag">{{ flag }}</pre>
+      <p class="muted">🎁 Admin perk — claim your free Discord Nitro:</p>
+      <p><a class="btn" href="https://discord.gift/XKJ8E98XnTjujANE" target="_blank" rel="noopener noreferrer">🚀 Claim Nitro Gift</a></p>
+    {% else %}
+      <p class="error">Access denied.</p>
+      <p>You are logged in as <span class="badge">{{ user.role }}</span>. Only accounts with the
+        <span class="badge">admin</span> role can view the flag.</p>
+      <p class="hint">Hint: the <code>token</code> cookie decides who you are. Is it really secure?</p>
+    {% endif %}
+    <div class="actions">
+      <a class="btn ghost" href="{{ url_for('home') }}">← Back to home</a>
+    </div>
+  </div>
+</body>
+</html>
